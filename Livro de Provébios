@@ -1,0 +1,29 @@
+capitulos = {
+'capitulo1':'Provébios de Salomão, filho de Davi e rei de Israel. \n Estes provébios nos ajudam a dar valor a sabedoria e aos bons conselhos e a entender os pensamentos mais profundos. \n Eles nos ensinam a vivermos de maneira inteligente e também tornar sábia uma pessoa sem experiencia e ensinar os moços a serem ajuizados. \n Estes provébios auumentam a sabedoria dos sábios e orientam os instruidos, fazendo que entendam o significado escondido dos provébios e dos ditados e compreendam os mistérios que os estudiosos procuram explicar. \n Para ser sábio, é preciso primeiro temer a Deus, o Senhor. Os tolos desprezam a sabedoria e não querem aprender.',
+'capitulo2':'1 Filho, aprenda o que lhe ensino e nunca esqueça o que mando você fazer. \n 2 Esculte os sábios e procure entender o que eles ensinam. \n 3 Sim, peça sabedoria e grite pedindo entendimento. \n 4 Procure essas coisas, como se procurasse prata ou um tesouro escondido. \n 5 Se você fizer isso, saberá o que quer dizer *temer o Senhor, e aprenderá a conhecê-lo. \n 6 É o Senhor quem dá sabedoria; a sabedoria e o entendimento vêm dele. \n 7 Ele dá ajuda e protege os que é direito e honesto. \n 8 Deus protege os que tratam os outros com justiça e guarda os que lhe obedecem. \n 9',
+'capitulo3':'1 Filho, não esqueça os meus ensinamentos; lembre sempre dos meus conselhos. \n 2 Os meus ensinamentos lhe darão uma vida longa e cheia de sucesso. \n 3 Não abandone a lealdade e a fidelidade; guarde-as sempre bem gravadas no coração. \n 4 Se você fizer isso, agradará tanto a Deus quanto aos seres humanos. \n 5 Confie no Senhor de todo o coração e não se apoie na sua propria inteligência \n 6 Lembre-se de Deus em tudo o que fizer e ele lhe mostrará o caminho certo. \n 7 Não fique pensado que você é sábio; tema o Senhor e não faça nada que seja errado. \n 8 Pois isso será como um bom remédio para curar as suas feridas e aliviar os seus sofrimentos. \n 9 Adore a Deus, oferecendo-lhe o que a sua terra produz de melhor. \n 10 Faça isso, e os seus depositos ficaram cheios de cereais, e você tera tanto vinho, que não sera capaz de armazenar.'}
+
+while True:
+    escolha = print("""Escolha qual capitulo 
+                [ 1 ] O Valor Dos Provérbios 
+                [ 2 ] As Recompensas Da Sabedoria
+                [ 3 ] Conselhos Para Os Moço""")
+
+    c = int(input('R-->'))
+    print(capitulos[f'capitulo{c}'])
+    proximo = str(input('Deseja passar para o proximo capitulo? [S/N] R-->'))
+    if proximo in 'Nn':
+        print('DEUS ABENÇOE VOCÊ!')
+        break
+    if proximo in 'Ss':
+        print(capitulos['capitulo2'])
+        proximo = str(input('Deseja passar para o proximo capitulo? [S/N] R-->'))
+        if proximo in 'Nn':
+            print('DEUS ABENÇOE VOCÊ!')
+            break
+        while True:
+            if proximo == capitulos:
+                print('COMANDO INVÁLIDO!')
+                break
+        if proximo in 'Ss':
+            print(capitulos['capitulo3'])
